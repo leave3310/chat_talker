@@ -154,12 +154,12 @@ ul {
       font-size: $h6-font-size;
     }
     li {
-      width: 30%;
+      width: 230px;
       &:nth-child(1) {
-        margin-right: 0px;
+        margin-right: 10px;
       }
       &:nth-child(3) {
-        margin-right: 0px;
+        margin-right: 10px;
       }
     }
     .flow-width {
