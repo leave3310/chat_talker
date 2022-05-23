@@ -1,149 +1,243 @@
 ul {
-    padding-left: 0;
+  padding-left: 0;
 }
 .h1-img {
-    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/logo.png");
-    background-size: contain;
-    width: 218px;
-    height: 40px;
-    text-indent: 101%;
-    overflow: hidden;
-    white-space: nowrap;
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/logo.png");
+  background-size: contain;
+  width: 218px;
+  height: 40px;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .bg-home {
-    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home.svg");
-    width: 850px;
-    height: 768px;
-    z-index: -1;
-    top: 0;
-    right: 0;
-    background-repeat: no-repeat;
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home.svg");
+  width: 850px;
+  height: 768px;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  background-repeat: no-repeat;
 }
 
 .bg-ball-1 {
-    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball01.svg");
-    width: 361px;
-    height: 360px;
-    left: -200px;
-    top: 750px;
-    z-index: -1;
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball01.svg");
+  width: 361px;
+  height: 360px;
+  left: -200px;
+  top: 750px;
+  z-index: -1;
 }
 
 .hero {
-    h2 {
-        font-size: $h1-font-size;
-    }
-    h3 {
-        font-size: $h5-font-size;
-    }
-    h4 {
-        font-size: $h6-font-size;
-    }
-    .hero-img {
-        width: 50%;
-    }
+  h2 {
+    font-size: $h1-font-size;
+  }
+  h3 {
+    font-size: $h5-font-size;
+  }
+  h4 {
+    font-size: $h6-font-size;
+  }
+  .hero-img {
+    width: 50%;
+  }
 }
 .to-top-button {
-    width: 71px;
-    height: 71px;
-    right: 50px;
-    bottom: 50px;
-    background: url("../images/top.svg");
+  width: 71px;
+  height: 71px;
+  right: 50px;
+  bottom: 50px;
+  background: url("../images/top.svg");
 }
 .platform {
-    h2 {
-        font-size: $h2-font-size;
-    }
-    h3 {
-        font-size: $h4-font-size;
-    }
-    img {
-        width: 90px;
-        height: 90px;
-    }
-    div {
-        color: $gray;
-    }
+  h2 {
+    font-size: $h2-font-size;
+  }
+  h3 {
+    font-size: $h4-font-size;
+  }
+  img {
+    width: 90px;
+    height: 90px;
+  }
+  div {
+    color: $gray;
+  }
 }
+
 .character {
+  h2 {
+    font-size: $h2-font-size;
+  }
+  h3 {
+    font-size: $h5-font-size;
+  }
+  h4 {
+    font-size: $font-size-base;
+  }
+  li {
+    width: 260px;
+    box-shadow: $li-shadow;
+  }
+}
+.shadow {
+  box-shadow: $li-shadow;
+}
+
+.flow {
+  h2 {
+    font-size: $h2-font-size;
+  }
+  h3 {
+    font-size: $h6-font-size;
+  }
+  a {
+    width: 132px;
+    padding: 12px 0;
+  }
+  li {
+    width: 230px;
+    padding: 32px 32px 48px 32px;
+    &:nth-child(1) {
+      order: 1;
+      margin-right: 47px;
+    }
+    &:nth-child(2) {
+      order: 2;
+    }
+    &:nth-child(3) {
+      order: 3;
+      margin-right: 47px;
+    }
+    &:nth-child(4) {
+      order: 4;
+    }
+  }
+  .flow-width {
+    width: 50%;
+  }
+  .flow-img {
+    width: 86px;
+    height: 86px;
+  }
+}
+@media(max-width: 1400px){
+  .flow{
+    .flow-width{
+      width: 100%;
+    }
+    li{
+      width:23%;
+      &:nth-child(1) {
+        margin-right: 0px;
+      }
+      &:nth-child(3) {
+        margin-right: 0px;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .bg-home {
+    background-size: cover;
+    width: 500px;
+    height: 600px;
+  }
+  .flow {
     h2 {
-        font-size: $h2-font-size;
+      font-size: $h3-font-size;
     }
     h3 {
-        font-size: $h5-font-size;
-    }
-    h4 {
-        font-size: $font-size-base;
+      font-size: $h6-font-size;
     }
     li {
-        width: 260px;
-        box-shadow: 0px 2px 10px #00000014;
+      width: 30%;
+      &:nth-child(1) {
+        margin-right: 0px;
+      }
+      &:nth-child(3) {
+        margin-right: 0px;
+      }
     }
-}
-@media (max-width: 992px) {
-    .bg-home {
-        background-size: cover;
-        width: 500px;
-        height: 600px;
+    .flow-width {
+      width: 100%;
     }
+  }
 }
 @media (max-width: 576px) {
-    .bg-home {
-        background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home_sm.svg");
-        width: 334px;
-        height: 244px;
-        top: 75%;
-        left: 50%;
+  .bg-home {
+    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home_sm.svg");
+    width: 334px;
+    height: 244px;
+    top: 75%;
+    left: 50%;
+  }
+  .hero {
+    h2 {
+      font-size: $h2-font-size;
     }
-    .hero {
-        h2 {
-            font-size: $h2-font-size;
-        }
-        h3 {
-            font-size: $font-size-base;
-        }
-        h4 {
-            font-size: $font-size-base;
-        }
-        .hero-img {
-            width: 100%;
-        }
+    h3 {
+      font-size: $font-size-base;
     }
-    .phone-border-bottom {
-        border-bottom: 2px solid #ffd153;
+    h4 {
+      font-size: $font-size-base;
     }
-    .to-top-button {
-        right: 16px;
-        bottom: 16px;
+    .hero-img {
+      width: 100%;
     }
-    .platform {
-        h2 {
-            font-size: $h3-font-size;
-        }
-        img {
-            width: 60px;
-            height: 60px;
-        }
-        h3 {
-            font-size: $h6-font-size;
-        }
-        div {
-            color: $gray;
-        }
+  }
+  .phone-border-bottom {
+    border-bottom: 2px solid #ffd153;
+  }
+  .to-top-button {
+    right: 16px;
+    bottom: 16px;
+  }
+  .platform {
+    h2 {
+      font-size: $h3-font-size;
     }
-    .character {
-        h2 {
-            font-size: $h3-font-size;
-        }
-        h3 {
-            font-size: $h6-font-size;
-        }
-        h4 {
-            font-size: $font-size-base;
-        }
-        li {
-            box-shadow: 0px 2px 10px #00000014;
-        }
+    img {
+      width: 60px;
+      height: 60px;
     }
+    h3 {
+      font-size: $h6-font-size;
+    }
+    div {
+      color: $gray;
+    }
+  }
+  .character {
+    h2 {
+      font-size: $h3-font-size;
+    }
+    h3 {
+      font-size: $h6-font-size;
+    }
+    h4 {
+      font-size: $font-size-base;
+    }
+    li {
+      box-shadow: 0px 2px 10px #00000014;
+    }
+  }
+  .flow {
+    li {
+      width: 230px;
+      &:nth-child(1) {
+        margin-right: 0px;
+      }
+      &:nth-child(2) {
+        order: 3;
+      }
+      &:nth-child(3) {
+        order: 2;
+        margin-right: 0px;
+      }
+    }
+  }
 }
