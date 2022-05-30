@@ -10,3 +10,7 @@ $h6-font-size: $font-size-base * 1.125 !default;
 $gray: #747474;
 
 $li-shadow: 0px 2px 10px #00000014;
+
+$desktop: max-width 1400px;
+$pad: max-width 992px;
+$phone: max-width 576px;
