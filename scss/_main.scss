@@ -141,13 +141,17 @@ ul {
   top: 30px;
   left: 210px;
 }
+.owl-item {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
 .comment {
   h2 {
     font-size: $h2-font-size;
   }
   .head-img {
-    width: 80px;
-    height: 80px;
+    width: 80px !important;
+    height: 80px !important;
     left: 32px;
     top: -50px;
   }
@@ -155,10 +159,36 @@ ul {
     font-size: $h4-font-size;
   }
 }
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: #ffd153 !important;
+  width: 16px;
+  height: 10px;
+}
+.user-experience {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/home_footer.svg");
+  padding-top: 300px;
+  padding-bottom: 100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  a {
+    width: 136px;
+  }
+}
 .price {
   background-color: #f7f9fd;
+  z-index: -2;
   border-bottom-left-radius: 300px;
   height: 470px;
+  .price-bg {
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/banner.svg");
+    top: 0;
+    right: 0;
+    width: 885px;
+    height: 559px;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
   @include media-breakpoint-down(sm) {
     border-bottom-left-radius: 150px;
   }
@@ -173,27 +203,98 @@ ul {
   }
 }
 .plan-select {
-  ul {
+  .bg-ball {
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball03.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    width: 94px;
+    height: 361px;
+    left: 0;
+    bottom: 113px;
+    z-index: -1;
+  }
+  .choose-person {
     overflow-x: auto;
+    display: flex;
+    justify-content: center;
+    li {
+      width: 130px;
+      display: inline-block;
+      border: 1px solid $primary;
+      color: $primary;
+      padding: 12px 32px;
+      margin-left: 16px;
+      cursor: pointer;
+      white-space: nowrap;
+      &.active {
+        background-color: $primary;
+        color: white;
+      }
+      &:nth-child(1) {
+        margin-left: 0;
+      }
+      @include media-breakpoint-down(sm) {
+        padding: 8px 16px;
+      }
+    }
   }
-  li {
-    border: 1px solid $primary;
+  .plan-body {
+    padding-bottom: 32px;
+  }
+  .gray-piece {
+    width: 169px;
+    background-color: $gray-10;
+    padding: 24px 32px;
+    div {
+      font-size: 12px;
+    }
+    span {
+      font-size: $h2-font-size;
+    }
+    sub {
+      text-align: end;
+      font-size: 12px;
+    }
+  }
+  .equal {
+    font-style: 29px;
+  }
+  .plan-select-desc {
+    li {
+      margin-bottom: 32px;
+    }
+  }
+  .w-136 {
+    width: 136px;
+  }
+}
+.normal-question {
+  ul {
+    max-width: 904px;
+    button {
+      border: none;
+    }
+  }
+  h3 {
+    font-size: $h6-font-size;
+  }
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+  .normal-question-des {
+    font-size: $font-size-base;
+    color: $gray;
+    display: none;
+    text-align: left;
+  }
+  .normal-question-active {
     color: $primary;
-    padding: 12px 32px;
-    margin-left: 16px;
-    cursor: pointer;
-    white-space: nowrap;
-    &.active {
-      background-color: $primary;
-      color: white;
-    }
-    &:nth-child(1) {
-      margin-left: 0;
-    }
-    @include media-breakpoint-down(sm) {
-      padding: 8px 16px;
-    }
   }
+}
+footer {
+  background-color: #f5f5f5;
 }
 @media (max-width: 1400px) {
   .flow {
@@ -209,6 +310,9 @@ ul {
         margin-right: 0px;
       }
     }
+  }
+  .user-experience {
+    background-size: contain;
   }
 }
 
@@ -243,14 +347,28 @@ ul {
       width: 100%;
     }
   }
+  .plan-select {
+    .bg-ball {
+      bottom: 33%;
+    }
+  }
+  .normal-question {
+    ul {
+      width: 90%;
+    }
+    h3 {
+      font-size: $font-size-base;
+    }
+  }
 }
 @media (max-width: 576px) {
   .bg-home {
     background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home_sm.svg");
     width: 334px;
     height: 244px;
-    top: 75%;
-    left: 50%;
+    top: 50vh;
+    left: 5vw;
+    background-size: contain;
   }
   .hero {
     h2 {
@@ -318,6 +436,56 @@ ul {
       &:nth-child(3) {
         order: 2;
         margin-right: 0px;
+      }
+    }
+  }
+  .user-experience {
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/footer_sm.svg");
+    padding-top: 293px;
+    padding-bottom: 60px;
+  }
+  .plan-select {
+    .bg-ball {
+      width: 96px;
+      height: 204px;
+    }
+    .choose-person {
+      overflow-x: auto;
+      justify-content: flex-start;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      li {
+        margin-left: 16px;
+        white-space: nowrap;
+        &.active {
+          background-color: $primary;
+          color: white;
+        }
+        &:nth-child(1) {
+          margin-left: 0;
+        }
+        @include media-breakpoint-down(sm) {
+          padding: 8px 16px;
+        }
+      }
+    }
+    .plan-body {
+      padding-bottom: 24px;
+    }
+    .gray-piece {
+      width: 139px;
+      padding: 16px 24px;
+
+      span {
+        font-size: 28px;
+      }
+    }
+    .plan-select-desc {
+      li {
+        margin-bottom: 16px;
       }
     }
   }
